@@ -12,6 +12,10 @@
     python manager.py db migrate
     python manager.py db upgrade
 
+> 接口文档
+
+# Category
+
 ## Addandedit(添加主类目或编辑类目名)
 
 #### url
