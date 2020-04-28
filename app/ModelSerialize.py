@@ -27,9 +27,8 @@ def SerializeQuerySet(querys, query_page, per_page=SerializeConfig.SQLALCHEMY_PA
             query_count query_dataitems query_datapages
     '''
     query_count = querys.count()
-    query_data = querys.paginate(query_page, per_page=per_page)
+    query_data = querys.paginate(int(query_page), per_page=per_page)
     return query_count, query_data.items, query_data.pages
-
 
 def Serialize(models, obj='obj', userid=None, dataprocessing=None, notreturn=[]):
     '''
@@ -111,6 +110,9 @@ def SerializeItem(model, userid=None, dataprocessing=None, notreturn=[]):
                     # 获取model原有的字段名的值
                     getattr(model, 'id') 获取model id 的值
                 '''
+
+                if dataprocessing == 'querynotelist':
+                    li.append(('note_content' , str(getattr(model, 'note_content'))[:80]))
 
                 # if dataprocessing == 'getarticlelist':
                 #     if c == 'cover':

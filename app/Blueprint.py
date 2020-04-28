@@ -1,8 +1,10 @@
 from app.category import category
 from app.subcategory import subcategory
 from app.note import note
+from app.microservice import microservice
 
 DEFAULT_BLUEPRINT = (
+    (microservice, '/'),
     (category, '/category'),
     (subcategory, '/subcategory'),
     (note, '/note'),

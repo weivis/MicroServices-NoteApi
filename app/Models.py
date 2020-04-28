@@ -18,7 +18,7 @@ class Note_SubCategory(db.Model):
     __tablename__ = 'note-subcategory'
 
     id = db.Column(db.Integer, primary_key=True)
-    categoryid = (db.Integer) # 主类目id
+    categoryid = db.Column(db.Integer) # 主类目id
     name = db.Column(db.Text)
     create_time = db.Column(db.DateTime, default=datetime.now)
     
@@ -28,7 +28,8 @@ class Note_Content(db.Model):
     __tablename__ = 'note-content'
 
     id = db.Column(db.Integer, primary_key=True)
-    subcategoryid = (db.Integer) # 子类目id
+    subcategoryid = db.Column(db.Integer) # 子类目id
     note_title = db.Column(db.Text)
-    note_content = db.Column(db.Text)
+    note_content = db.Column(LONGTEXT)
+    is_delete = db.Column(db.Boolean, default=False)
     create_time = db.Column(db.DateTime, default=datetime.now)

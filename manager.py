@@ -4,7 +4,7 @@ from app import create_app
 from app.Extensions import db
 from flask_migrate import MigrateCommand, Migrate
 from flask_script import Manager, Server, Command
-from app import Models
+from app.Models import Note_Category, Note_Content, Note_SubCategory
 
 app = create_app()
 manager = Manager(app)
