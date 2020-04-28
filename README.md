@@ -1,5 +1,7 @@
-# Category
+# MicroServices-NoteApi
 # 微服务-个人笔记模块
+
+    基于python flask 数据库采用mysql
 
 ### 启动方法
     python manager.py runserver
