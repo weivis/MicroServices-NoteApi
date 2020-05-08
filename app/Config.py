@@ -9,7 +9,7 @@ SECRET_KEY = '\x12my\x0bVO\xeb\xf8\x18\x15\xc5_?\x91\xd7h\x06AC'
 # ----------------------------------------------------------------------
 
 # 测试服数据库
-SQLALCHEMY_DATABASE_URI = "mysql://root:@1270.0.0.1:3306/note?charset=utf8mb4"
+SQLALCHEMY_DATABASE_URI = "mysql://root:weivimysql@127.0.0.1:3306/noteapi?charset=utf8mb4"
 
 # SQLALCHEMY_DATABASE_URI = "mysql://root:weivimysql@47.94.153.68:3306/weivi-note?charset=utf8mb4"
 
@@ -19,7 +19,8 @@ SQLALCHEMY_TRACK_MODIFICATIONS = False
 # ----------------------------------------------------------------------
 
 # 服务器地址
-SERVER_GULAOBURL = 'http://127.0.0.1:8080'
+# SERVER_GULAOBURL = 'http://127.0.0.1:8080'
+SERVER_GULAOBURL = 'http://noteapi.weivird.com/'
 SERVER_STATICLOADURL = SERVER_GULAOBURL + '/static'
 
 # ----------------------------------------------------------------------
